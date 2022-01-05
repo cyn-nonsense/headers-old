@@ -1,0 +1,239 @@
+body {
+    background-color: #393D42;
+    overflow:hidden;
+}
+pre code.hljs {
+    padding-top:0!important;
+}
+#navbar {
+    height: 50px;
+    background-color: #0000005e;
+    width: 98%;
+    margin-left: 1%;
+    margin-top: 2%;
+    overflow:hidden;
+}
+div#logo {
+    color: #e4e4e4;
+    font-size: 17px;
+    padding: 16px 21px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+div#content {
+    width: 98%;
+    background-color: #313131;
+    height: 92%;
+    margin-left: 1%;
+}
+.dir {
+    height: 24px;
+    background-color: #292929;
+    margin-left: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: white;
+    padding-left: 13px;
+    font-size: 14px;
+    padding-top: 8px;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    box-shadow: inset 5px 0 0 rgba(0,0,0,0.3);
+}
+.folder-rep {
+    height: 24px;
+    background-color: #292929;
+    margin-left: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: white;
+    padding-left: 13px;
+    font-size: 14px;
+    padding-top: 8px;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    box-shadow: inset 5px 0 0 rgba(183, 64, 64 ,0.4);
+}
+
+#content > div {
+    padding-top: 5px;
+    overflow-y: scroll;
+    /* meh */
+    max-height: 99%;
+    padding-bottom: 4px;
+
+    min-width: 50%;
+}
+
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #272727;
+}
+
+::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #4e4e4e;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #533b54;
+}
+
+code.hljs {
+    background: transparent;
+}
+#navbar > div.button:last-child {
+    color: #a29696;
+}
+
+#navbar > div.button {
+    padding: 16px 14px;
+    display: inline-block;
+    color: #e4e4e4;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+#dirlist .folder .dir {
+    margin-left: 30px;
+}
+#dirlist .folder.closed .dir {
+    display: none;
+}
+.patreon {
+    display: inline-block;
+    float: right;
+    padding: 9px 9px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 14px;
+    opacity: 0.3;
+    margin: 7px 10px;
+    text-decoration: none;
+}
+input[type="text"] {
+    float: right;
+    padding: 6px 12px;
+    margin: 11px 10px;
+    background-color: #39434c;
+    border: none;
+    color: white;
+}
+#searchresultcontainer.inactive {
+    display:none;
+}
+div#searchresultcontainer {
+    background: #00000073;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div#searchresultlist {
+    background-color: white;
+    position: absolute;
+    width: 193px;
+    top: 64px;
+    right: 30px;
+}
+#linenumbers, #difflinenumbers {
+    /* display: none; */
+    float: left;
+    padding-top: 4em;
+    padding-left: 15px;
+    color: #464646;
+    background-color: #272727;
+    padding-right: 5px;
+    margin-right: -6px;
+    text-align: right;
+    margin-top: -3em;
+}
+#linenumbers div, #difflinenumbers div {
+    display: inline-block;
+    padding-left: 30px;
+    margin-left: -30px;
+    cursor: pointer;
+}
+#linenumbers div.selected, #difflinenumbers div.selected {
+    background-color: #3b5154;
+    color: white;
+}
+
+div.addition {
+    color: green;
+    background-color: #083114;
+
+}
+
+div.subtraction {
+    color: red;
+    background-color: #2f1717;
+}
+
+pre#logos.inactive {
+    display:none;
+}
+pre#logos {
+    width: auto;
+    overflow: scroll;
+    height: 31%;
+    padding-top: 20px;
+    overflow-x: hidden;
+    background-color: #393d42;
+    color: #b7b0ce;
+}
+div#dirlist.logosdisp {
+    height: 65%;
+    padding-bottom: 12px;
+    margin-bottom: -13px;
+}
+pre {
+    margin-bottom: 0em;
+}
+
+pre#logos::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #393d42;
+}
+
+pre#logos::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #4e4e4e;
+}
+
+a {
+    color: white;
+}
+
+pre#logos::-webkit-scrollbar-thumb {
+    background-color: #3b5154;
+}
+
+body:not(.file) #diff-select {
+    display:none;
+}
+
+#diff-select {
+    float: right;
+    padding: 6px 12px;
+    margin: 11px 10px;
+    background-color: #39434c;
+    border: none;
+    color: white;
+}
+
+body.file #search
+{
+    display: none;
+}
+body.diff div#content {
+    display: flex;
+}
