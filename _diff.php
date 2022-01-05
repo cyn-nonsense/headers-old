@@ -31,7 +31,7 @@ rightDiv.onscroll = function() {
     echo "<script>";
     echo "renderDiffLineNumbers();renderLineNumbers();";
     $cmd = "diff " . 'headers/' . $_GET['sdk'] . '/' . $_GET['fw'] . '/' . $_GET['file'] . " " . $filename;
-    if (strpos($cmd, ";") === false and strpos($cmd, "&") === false and strpos($cmd, "|") === false) {
+    if (preg_match("^[a-zA-Z0-9\.\/]*?.h$", $cmd)) {
         $output = shell_exec($cmd);
     }
     else {
