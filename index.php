@@ -23,14 +23,14 @@
      _/############//   (@::@)   \\############\_
     /#############((     \\//     ))#############\
    -###############\\    (oo)    //###############-
-  -#################\\  / VV \  //#################-
+  -#################\\  /    \  //#################-
  -###################\\/      \//###################-
 _#/|##########/\######(   /\   )######/\##########|\#_
 |/ |#/\#/\#/\/  \#/\##\  |  |  /##/\#/  \/\#/\#/\#| \|
 `  |/  V  V  `   V  \#\| |  | |/#/  V   '  V  V  \|  '
    `   `  `      `   / | |  | | \   '      '  '   '
                     (  | |  | |  )    headers.cynder.me
-                   __\ | |  | | /__   @arm64e
+   php codebase    __\ | |  | | /__   @arm64e
                   (vvv(VVV)(VVV)vvv)  gh/cxnder/headers
 
 -->
@@ -62,15 +62,23 @@ _#/|##########/\######(   /\   )######/\##########|\#_
     <?php
     if (isset($_GET['sdk']))
     {
-        echo "<div class=\"button\" onclick=\"loadsdk('" . $_GET['sdk'] . "')\">" . htmlentities($_GET['sdk']) . "</div>";
+        if (preg_match("^iOS[0-9\.]*?$", $_GET['sdk']))
+        {
+            echo "<div class=\"button\" onclick=\"loadsdk('" . $_GET['sdk'] . "')\">" . htmlentities($_GET['sdk']) . "</div>";
+        }
     }
     if (isset($_GET['fw']))
     {
-        echo "<div class=\"button\" onclick=\"loadfw('" . $_GET['fw'] . "')\">" . htmlentities($_GET['fw']) . "</div>";
+        if (preg_match("^[a-zA-Z0-9\.\/]*?.framework$", $_GET['fw']))
+        {
+            echo "<div class=\"button\" onclick=\"loadfw('" . $_GET['fw'] . "')\">" . htmlentities($_GET['fw']) . "</div>";
+        }
     }
     if (isset($_GET['file']))
     {
-        echo "<div class=\"button\" onclick=\"loadfn('" . $_GET['file'] . "')\">" . htmlentities($_GET['file']) . "</div>";
+        if (preg_match("^[a-zA-Z0-9\.\/]*?.h$", $_GET['file'])) {
+            echo "<div class=\"button\" onclick=\"loadfn('" . $_GET['file'] . "')\">" . htmlentities($_GET['file']) . "</div>";
+        }
     }
     ?>
     <input type="text" placeholder="Search" id="search">
